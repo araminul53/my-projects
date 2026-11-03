@@ -1,0 +1,633 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar */
+header{
+    width: 100%;
+    height: 86px;
+    background-color:#ffffff;
+    position: relative;
+    z-index: 100;
+}
+
+nav{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    gap: 25px;
+}
+
+#logo{
+    display: flex;
+    align-items: center;
+}
+
+#logo img{
+    width: 200px;
+    height: auto;
+    display: block;
+    max-width: 100%;
+}
+
+nav a{
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 400;
+    color: #263b60;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+nav a:hover{
+    color: #bd963d;
+}
+
+nav button{
+    background-color:#1b2d53;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    padding: 16px 22px;
+    font-size: 17px;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+nav button:hover{
+    background-color: #014b21;
+}
+
+
+/* Hero Section */
+.hero-section{
+    position: relative;  
+    min-height: 580px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;      
+    width: 100%;
+    background: #0d1b3e;
+
+}
+
+/* Hero Content */
+.hero-content {
+    width: 55%;
+    position: relative;
+    z-index: 5;
+    padding: 50px 0 50px 5%;
+}
+
+.hero-content h1{
+    max-width: 620px;
+    color: #ffffff;
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1.35;
+    margin-bottom: 27px;
+}
+
+.hero-content p{
+    max-width: 650px;
+    color: #d0d6e1;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+
+/* Button */
+.button-filled{
+    background-color: #ffffff;
+    color:  #1b2d53;
+    padding: 13px 20px;
+    border-radius: 11px;
+    border: 2px solid #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button-filled:hover{
+    background-color: transparent;
+    color: #ffffff;
+}
+
+
+/* Right Side Image */
+.hero-image {
+    width: 50%;
+    height: 800px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    clip-path: polygon(
+        30% 0,
+        100% 0,
+        100% 90%,
+        80% 100%,
+        40% 90%,
+        13% 40%
+    );
+}
+
+.right-side-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Services Section */
+.services-section{
+    color: #1d2c53;
+    background-color: #f4f5f8;
+    font-family: Arial, sans-serif;
+    padding: 70px 60px;
+    min-height: 680px;
+}
+
+.services-heading{
+    margin-bottom: 62px;
+}
+
+.services-heading h2{
+    color: #354465;
+    font-size: 46px;
+    font-weight: 400;
+    margin: 0 0  14px;
+}
+
+.services-heading h2 strong{
+    font-weight: 700;
+    color: #1d2c53;
+}
+
+.services-heading p{
+    font-size: 16px;
+    color: #52617f;
+    line-height: 20px;
+    margin: 0;
+}
+
+
+/* Services Containers */
+.services-container{
+    display: grid;
+    align-items: stretch;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 36px;
+}
+
+.services-card{
+    background-color: #ffffff;
+    border-radius: 12px;
+    height: 220px;
+    width: 100%;
+    padding: 15px 22px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.services-card h3{
+    font-size: 20px;
+    font-weight: 700;
+    color: #1d2c53;
+    margin: 0 0 10px;
+    white-space: nowrap;
+}
+
+.services-card p{
+    font-size: 14px;
+    line-height: 15px;
+    color: #1d2c53;
+}
+
+.read-more{
+    text-decoration: none;
+    font-size: 15px;
+    color: #1d2c53;
+    margin-top: auto;
+    margin-bottom: 0;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+.services-icon{
+    width: 50px;
+    height: 50px;
+    background-color: #e7e9f6ea;
+    border-radius: 9px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 22px;
+}
+
+.services-icon svg{
+    width: 30px;
+    height: 30px;
+    color: #1d2c53;
+}
+
+.service-button{
+    background-color: #1d2c53;
+    border-radius: 12px;
+    height: 220px;
+    padding: 15px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.service-button h3{
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 25px;
+    color: #ffffff;
+}
+
+.explore-button{
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: 12px;
+    transition: 0.3;
+}
+
+.explore-button:hover{
+    background-color: #ffffff;
+    color: #1d2c53;
+}
+
+
+/* Staffing Roles Section */
+.staffing-section{
+    font-family: Arial, sans-serif;
+    color: #14294b;
+    background: linear-gradient(120deg, #d5e3ff, #f0ffff);
+    gap: 35px;
+    padding: 40px 35px;
+    min-height: 630px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+}
+
+.staffing-content{
+    padding: 0;
+}
+
+.staffing-content h2{
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 29px;
+    max-width: 330px;
+    margin: 0 0 18px;
+}
+
+.staffing-content p{
+    font-size: 15px;
+    line-height: 17px;
+    color: #52617f;
+    max-width: 320px;
+    padding: 0 0 16px;
+}
+
+.explore-all-staffs{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 1px solid #1d2c53;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    transition: 0.3s;
+    padding: 10px;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.explore-all-staffs:hover{
+    background-color: #1d2c53;
+    color: #ffffff;
+}
+
+.staffing-roles{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.staffing-item{
+    background-color: #ffffff;
+    border: 1px solid #e6eaf0;
+    border-radius: 8px;
+}
+
+.staffing-item summary{
+    list-style: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    color: #101b31;
+    padding: 13px 10px;
+    position: relative;
+}
+
+.staffing-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.staffing-item summary::after {
+    content: "⌄";
+    position: absolute;
+    right: 12px;
+    top: 8px;
+    font-size: 25px;
+    color: #526da5;
+    transition: transform 0.3s;
+}
+
+.staffing-item[open] summary::after {
+    transform: rotate(180deg);
+}
+
+.staffing-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding: 0 30px 30px;
+}
+
+.staffing-list ul{
+    margin: 0;
+    padding-left: 10px;
+}
+
+.staffing-list li{
+    font-size: 14px;
+    line-height: 26px;
+    color: #444444;
+}
+
+
+/* =================================
+   Responsive Design
+================================= */
+
+/* Large Desktop / Computer */
+
+@media (min-width: 1440px) {
+
+    .staffing-section {
+        padding: 50px 60px;
+        gap: 50px;
+    }
+
+    .staffing-content h2 {
+        font-size: 26px;
+        line-height: 35px;
+        max-width: 400px;
+    }
+
+    .staffing-content p {
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .staffing-item summary {
+        font-size: 13px;
+        padding: 15px;
+    }
+
+    .staffing-list li {
+        font-size: 11px;
+        line-height: 25px;
+    }
+}
+
+
+/* Laptop */
+
+@media (min-width: 1025px) and (max-width: 1439px) {
+
+    .staffing-section {
+        grid-template-columns: 1fr 1.4fr;
+        gap: 30px;
+        padding: 40px 35px;
+    }
+
+    .staffing-content h2 {
+        font-size: 21px;
+        line-height: 29px;
+    }
+
+    .staffing-roles {
+        gap: 8px;
+    }
+}
+
+
+/* Small Laptop / Tablet */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .staffing-section {
+        grid-template-columns: 0.8fr 1.5fr;
+        gap: 20px;
+        padding: 35px 25px;
+    }
+
+    .staffing-content h2 {
+        font-size: 19px;
+        line-height: 26px;
+    }
+
+    .staffing-content p {
+        font-size: 11px;
+        line-height: 17px;
+    }
+
+    .staffing-list {
+        gap: 8px;
+        padding: 0 8px 10px;
+    }
+
+    .staffing-list li {
+        font-size: 8px;
+        line-height: 20px;
+    }
+
+    .staffing-item summary {
+        font-size: 10px;
+    }
+}
+
+
+/* Tablet */
+
+@media (min-width: 601px) and (max-width: 768px) {
+
+    .staffing-section {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 35px 25px;
+        min-height: auto;
+    }
+
+    .staffing-content h2 {
+        font-size: 24px;
+        line-height: 32px;
+        max-width: 450px;
+    }
+
+    .staffing-content p {
+        font-size: 13px;
+        line-height: 20px;
+        max-width: 450px;
+    }
+
+    .staffing-roles {
+        width: 100%;
+    }
+
+    .staffing-item summary {
+        font-size: 12px;
+        padding: 15px 12px;
+    }
+
+    .staffing-list li {
+        font-size: 10px;
+        line-height: 23px;
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .staffing-section {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+        padding: 30px 18px;
+
+        min-height: auto;
+    }
+
+    .staffing-content {
+        width: 100%;
+    }
+
+    .staffing-content h2 {
+        font-size: 23px;
+        line-height: 31px;
+        max-width: 100%;
+    }
+
+    .staffing-content p {
+        font-size: 13px;
+        line-height: 20px;
+        max-width: 100%;
+    }
+
+    .explore-all-staffs {
+        font-size: 12px;
+        padding: 9px 12px;
+    }
+
+    /* Staffing Roles */
+
+    .staffing-roles {
+        width: 100%;
+        gap: 10px;
+    }
+
+    .staffing-item {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .staffing-item summary {
+        font-size: 12px;
+        padding: 14px 12px;
+    }
+
+    /* Staffing List */
+
+    .staffing-list {
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding: 0 12px 12px;
+    }
+
+    .staffing-list ul {
+        padding-left: 16px;
+    }
+
+    .staffing-list li {
+        font-size: 11px;
+        line-height: 24px;
+    }
+
+}
+
+
+/* Extra Small Mobile */
+
+@media (max-width: 380px) {
+
+    .staffing-section {
+        padding: 25px 14px;
+    }
+
+    .staffing-content h2 {
+        font-size: 21px;
+        line-height: 28px;
+    }
+
+    .staffing-content p {
+        font-size: 12px;
+    }
+
+    .staffing-item summary {
+        font-size: 11px;
+    }
+
+    .staffing-list li {
+        font-size: 10px;
+        line-height: 22px;
+    }
+
+}
