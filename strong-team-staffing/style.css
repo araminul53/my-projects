@@ -1202,12 +1202,10 @@ nav button:hover{
 
 
 
-
-
-/* =====================================
-   FIXED RESPONSIVE CSS
-   Add this code at the END of style.css
-===================================== */
+/* =========================================
+   FINAL RESPONSIVE CSS
+   STRONG TEAM STAFFING
+========================================= */
 
 html,
 body {
@@ -1225,13 +1223,15 @@ video {
     max-width: 100%;
 }
 
-/* Tablet */
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
 @media (max-width: 992px) {
 
     /* Navbar */
     header {
         height: auto;
-        position: relative;
     }
 
     nav {
@@ -1239,7 +1239,7 @@ video {
         padding: 15px 25px;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 18px;
+        gap: 15px;
     }
 
     #logo img {
@@ -1247,17 +1247,22 @@ video {
     }
 
     /* Hero */
-    .hero-section {
-        min-height: 550px;
-    }
-
     .hero-content {
-        width: 60%;
-        padding: 40px 25px;
+        width: 55%;
+        padding-left: 4%;
     }
 
     .hero-content h1 {
         font-size: 40px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .hero-image {
+        width: 50%;
+        height: 100%;
     }
 
     /* Services */
@@ -1278,8 +1283,8 @@ video {
     /* Staffing */
     .staffing-section {
         grid-template-columns: 1fr;
-        padding: 35px 25px;
         gap: 25px;
+        padding: 35px 25px;
     }
 
     .staffing-content h2,
@@ -1296,14 +1301,10 @@ video {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    /* Cost estimate */
+    /* Cost Estimate */
     .cost-estimate {
         grid-template-columns: 1fr;
         padding: 40px 25px;
-    }
-
-    .cost-heading h2 {
-        font-size: 36px;
     }
 
     /* Founder */
@@ -1336,12 +1337,14 @@ video {
     /* Footer */
     .footer-container {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 30px;
     }
 }
 
 
-/* Mobile */
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
 @media (max-width: 600px) {
 
     /* Navbar */
@@ -1354,77 +1357,113 @@ video {
     nav {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
-        padding: 15px;
+        gap: 5px 8px;
+        padding: 12px 15px;
         justify-items: center;
+        align-items: center;
     }
 
     #logo {
         grid-column: 1 / -1;
         justify-content: center;
+        margin-bottom: 5px;
     }
 
     #logo img {
-        width: 220px;
+        width: 180px;
     }
 
     nav a {
         font-size: 15px;
-        white-space: normal;
+        padding: 4px;
         text-align: center;
+        white-space: normal;
     }
 
     nav button {
         grid-column: 1 / -1;
         width: 100%;
-        padding: 13px;
+        padding: 11px;
+        margin-top: 5px;
         font-size: 16px;
     }
 
-    /* Hero */
+
+    /* Hero Section */
     .hero-section {
-        min-height: 560px;
         width: 100%;
+        min-height: 600px;
         display: flex;
         align-items: center;
         justify-content: center;
-    }
-
-    .hero-content {
-        width: 100%;
-        padding: 45px 20px;
-        text-align: center;
-    }
-
-    .hero-content h1 {
-        font-size: 32px;
-        line-height: 1.25;
-        margin-bottom: 20px;
-    }
-
-    .hero-content p {
-        font-size: 16px;
-        line-height: 1.5;
+        position: relative;
+        overflow: hidden;
+        background: #0d1b3e;
     }
 
     .hero-image {
         position: absolute;
-        inset: 0;
+        top: 0;
+        left: 0;
+        right: 0;
         width: 100%;
         height: 100%;
-        opacity: 0.25;
+        clip-path: none;
+        opacity: 1;
+        z-index: 1;
     }
 
     .right-side-image {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: center;
+        filter: brightness(0.9);
     }
 
-    /* Services */
+    .hero-image::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(13, 27, 62, 0.25);
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 5;
+        width: 100%;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+        line-height: 1.3;
+        margin-bottom: 20px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 25px;
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+    }
+
+    .button-filled {
+        padding: 13px 22px;
+        font-size: 16px;
+    }
+
+
+    /* Services Section */
     .services-section {
-        padding: 45px 20px;
+        width: 100%;
         min-height: auto;
+        padding: 45px 20px;
     }
 
     .services-heading {
@@ -1472,21 +1511,25 @@ video {
         line-height: 1.3;
     }
 
+
     /* Staffing Roles */
     .staffing-section {
         display: grid;
         grid-template-columns: 1fr;
+        width: 100%;
+        min-height: auto;
         padding: 35px 20px;
         gap: 25px;
-        min-height: auto;
     }
 
     .staffing-content h2 {
+        max-width: 100%;
         font-size: 30px;
         line-height: 1.2;
     }
 
     .staffing-content p {
+        max-width: 100%;
         font-size: 16px;
         line-height: 1.5;
     }
@@ -1516,8 +1559,10 @@ video {
         line-height: 1.7;
     }
 
+
     /* How It Works */
     .how-it-works {
+        width: 100%;
         padding: 45px 20px;
     }
 
@@ -1564,12 +1609,14 @@ video {
         line-height: 1.5;
     }
 
+
     /* Cost Estimate */
     .cost-estimate {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 25px;
+        width: 100%;
         padding: 40px 18px;
+        gap: 25px;
     }
 
     .cost-heading h2 {
@@ -1578,6 +1625,7 @@ video {
     }
 
     .cost-heading p {
+        max-width: 100%;
         font-size: 15px;
         line-height: 1.5;
     }
@@ -1598,15 +1646,19 @@ video {
     }
 
     .form-inputs {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 12px;
     }
 
     .form-inputs input,
     .form-inputs select {
-        grid-column: 1 / -1;
+        grid-column: span 1;
         width: 100%;
-        height: 46px;
+        min-width: 0;
+    }
+
+    .form-inputs .message {
+        grid-column: 1 / -1;
     }
 
     .role-option {
@@ -1627,8 +1679,13 @@ video {
     }
 
     .role-information {
+        width: 100%;
         align-items: flex-start;
         gap: 12px;
+    }
+
+    .role-info-content {
+        min-width: 0;
     }
 
     .role-info-content h3 {
@@ -1637,12 +1694,14 @@ video {
 
     .role-features {
         justify-content: flex-start;
+        gap: 12px;
     }
+
 
     /* Founder Story */
     .founder-story {
+        width: 100%;
         height: auto;
-        display: grid;
         grid-template-columns: 1fr;
         padding: 35px 20px;
         gap: 25px;
@@ -1663,9 +1722,10 @@ video {
         height: 230px;
     }
 
+
     /* FAQ */
     .faq-section {
-        display: grid;
+        width: 100%;
         grid-template-columns: 1fr;
         padding: 40px 20px;
         gap: 25px;
@@ -1685,8 +1745,10 @@ video {
         line-height: 1.5;
     }
 
+
     /* Contact */
     .contact-section {
+        width: 100%;
         padding: 45px 15px;
     }
 
@@ -1699,14 +1761,14 @@ video {
     }
 
     .contact-container {
-        grid-template-columns: 1fr;
         width: 100%;
+        grid-template-columns: 1fr;
     }
 
     .contact-info,
     .contact-form {
-        padding: 25px 18px;
         width: 100%;
+        padding: 25px 18px;
     }
 
     .contact-input-group {
@@ -1728,8 +1790,10 @@ video {
         width: 100%;
     }
 
+
     /* Footer */
     .footer-section {
+        width: 100%;
         padding: 40px 20px 20px;
     }
 
@@ -1758,15 +1822,26 @@ video {
 }
 
 
-/* Extra Small Mobile */
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
 @media (max-width: 380px) {
 
     #logo img {
-        width: 190px;
+        width: 170px;
     }
 
     .hero-content h1 {
-        font-size: 28px;
+        font-size: 27px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    .hero-section {
+        min-height: 560px;
     }
 
     .services-heading h2,
