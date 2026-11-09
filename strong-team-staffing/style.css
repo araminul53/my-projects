@@ -1204,172 +1204,578 @@ nav button:hover{
 
 
 
+/* =====================================
+   FIXED RESPONSIVE CSS
+   Add this code at the END of style.css
+===================================== */
 
-/* RESPONSIVE DESIGN */
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
 
-/* Laptop */
-@media (max-width: 1200px) {
-        .container {
-            width: 90%;
-    }
+* {
+    box-sizing: border-box;
+}
 
-    .hero-content h1 {
-        font-size: 52px;
-    }
+img,
+video {
+    max-width: 100%;
 }
 
 /* Tablet */
 @media (max-width: 992px) {
-    .hero-section,
-    .founder-section {
-        flex-direction: column;
+
+    /* Navbar */
+    header {
+        height: auto;
+        position: relative;
     }
 
-    .hero-content,
-    .hero-image,
-    .founder-content,
-    .founder-image {
-        width: 100%;
+    nav {
+        height: auto;
+        padding: 15px 25px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
     }
 
-    .services-grid,
-    .staffing-grid {
-        grid-template-columns: repeat(2, 1fr);
+    #logo img {
+        width: 180px;
     }
 
-    .how-it-works-grid {
-        grid-template-columns: repeat(2, 1fr);
+    /* Hero */
+    .hero-section {
+        min-height: 550px;
+    }
+
+    .hero-content {
+        width: 60%;
+        padding: 40px 25px;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    /* Services */
+    .services-section {
+        padding: 55px 30px;
+        min-height: auto;
+    }
+
+    .services-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .services-card h3 {
+        white-space: normal;
+    }
+
+    /* Staffing */
+    .staffing-section {
+        grid-template-columns: 1fr;
+        padding: 35px 25px;
+        gap: 25px;
+    }
+
+    .staffing-content h2,
+    .staffing-content p {
+        max-width: 100%;
+    }
+
+    /* How it works */
+    .how-it-works {
+        padding: 45px 25px;
+    }
+
+    .how-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Cost estimate */
+    .cost-estimate {
+        grid-template-columns: 1fr;
+        padding: 40px 25px;
+    }
+
+    .cost-heading h2 {
+        font-size: 36px;
+    }
+
+    /* Founder */
+    .founder-story {
+        height: auto;
+        grid-template-columns: 1fr;
+        padding: 35px 25px;
+    }
+
+    .founder-video {
+        height: 350px;
+    }
+
+    /* FAQ */
+    .faq-section {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 40px 25px;
+    }
+
+    /* Contact */
+    .contact-section {
+        padding: 50px 25px;
     }
 
     .contact-container {
         grid-template-columns: 1fr;
     }
 
+    /* Footer */
     .footer-container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px;
     }
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-    .container {
-        width: 92%;
-    }
 
+/* Mobile */
+@media (max-width: 600px) {
+
+    /* Navbar */
     header {
-        padding: 15px 0;
+        width: 100%;
+        height: auto;
+        position: relative;
     }
 
     nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 12px;
+        padding: 15px;
+        justify-items: center;
     }
 
-    .hero-section {
-        flex-direction: column;
+    #logo {
+        grid-column: 1 / -1;
+        justify-content: center;
+    }
+
+    #logo img {
+        width: 220px;
+    }
+
+    nav a {
+        font-size: 15px;
+        white-space: normal;
         text-align: center;
-        padding: 50px 0;
+    }
+
+    nav button {
+        grid-column: 1 / -1;
+        width: 100%;
+        padding: 13px;
+        font-size: 16px;
+    }
+
+    /* Hero */
+    .hero-section {
+        min-height: 560px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-content {
+        width: 100%;
+        padding: 45px 20px;
+        text-align: center;
     }
 
     .hero-content h1 {
-        font-size: 38px;
+        font-size: 32px;
+        line-height: 1.25;
+        margin-bottom: 20px;
     }
 
     .hero-content p {
         font-size: 16px;
+        line-height: 1.5;
     }
 
-    .hero-image img {
+    .hero-image {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.25;
+    }
+
+    .right-side-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Services */
+    .services-section {
+        padding: 45px 20px;
+        min-height: auto;
+    }
+
+    .services-heading {
+        margin-bottom: 30px;
+    }
+
+    .services-heading h2 {
+        font-size: 34px;
+    }
+
+    .services-heading p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .services-heading p br {
+        display: none;
+    }
+
+    .services-container {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .services-card,
+    .service-button {
         width: 100%;
         height: auto;
+        min-height: 200px;
+        padding: 20px;
     }
 
-    .services-grid,
-    .staffing-grid,
-    .how-it-works-grid {
+    .services-card h3 {
+        font-size: 19px;
+        white-space: normal;
+    }
+
+    .services-card p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .service-button h3 {
+        font-size: 23px;
+        line-height: 1.3;
+    }
+
+    /* Staffing Roles */
+    .staffing-section {
+        display: grid;
         grid-template-columns: 1fr;
+        padding: 35px 20px;
+        gap: 25px;
+        min-height: auto;
     }
 
-    .cost-estimate-container {
+    .staffing-content h2 {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+    .staffing-content p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .staffing-roles {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .staffing-item {
+        width: 100%;
+    }
+
+    .staffing-item summary {
+        font-size: 17px;
+        padding: 15px 30px 15px 12px;
+    }
+
+    .staffing-list {
         grid-template-columns: 1fr;
+        gap: 5px;
+        padding: 0 20px 20px;
     }
 
-    .founder-section {
-        flex-direction: column;
+    .staffing-list li {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    /* How It Works */
+    .how-it-works {
+        padding: 45px 20px;
+    }
+
+    .how-heading h2 {
+        font-size: 32px;
+        line-height: 1.25;
+    }
+
+    .how-heading h2 br {
+        display: none;
+    }
+
+    .how-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .cards {
+        width: 100%;
+        min-height: auto;
+        padding: 15px;
+    }
+
+    .cards img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+    }
+
+    .card-content {
+        padding-top: 18px;
+    }
+
+    .card-content span {
+        margin-bottom: 15px;
+    }
+
+    .card-content h3 {
+        font-size: 20px;
+    }
+
+    .card-content p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    /* Cost Estimate */
+    .cost-estimate {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 40px 18px;
+    }
+
+    .cost-heading h2 {
+        font-size: 34px;
+        line-height: 1.2;
+    }
+
+    .cost-heading p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .cost-form {
+        width: 100%;
+        min-width: 0;
+        padding: 18px;
+    }
+
+    .form-heading h3 {
+        font-size: 20px;
+    }
+
+    .form-heading p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .form-inputs {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .form-inputs input,
+    .form-inputs select {
+        grid-column: 1 / -1;
+        width: 100%;
+        height: 46px;
+    }
+
+    .role-option {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .role-card {
+        width: 100%;
+        min-height: 60px;
+        height: auto;
+        padding: 12px;
+    }
+
+    .role-name {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .role-information {
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .role-info-content h3 {
+        font-size: 20px;
+    }
+
+    .role-features {
+        justify-content: flex-start;
+    }
+
+    /* Founder Story */
+    .founder-story {
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 35px 20px;
+        gap: 25px;
+    }
+
+    .founder-content h2 {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .founder-content p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .founder-video {
+        width: 100%;
+        height: 230px;
+    }
+
+    /* FAQ */
+    .faq-section {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 40px 20px;
+        gap: 25px;
+    }
+
+    .faq-heading h2 {
+        font-size: 32px;
+    }
+
+    .faq-item summary {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .faq-item p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    /* Contact */
+    .contact-section {
+        padding: 45px 15px;
+    }
+
+    .contact-heading h2 {
+        font-size: 30px;
+    }
+
+    .contact-heading h2 br {
+        display: none;
     }
 
     .contact-container {
         grid-template-columns: 1fr;
+        width: 100%;
     }
 
+    .contact-info,
     .contact-form {
+        padding: 25px 18px;
         width: 100%;
+    }
+
+    .contact-input-group {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-field,
+    .contact-field.full-width {
+        grid-column: 1 / -1;
+        width: 100%;
+    }
+
+    .contact-field input,
+    .contact-field textarea {
+        width: 100%;
+    }
+
+    .contact-submit {
+        width: 100%;
+    }
+
+    /* Footer */
+    .footer-section {
+        padding: 40px 20px 20px;
     }
 
     .footer-container {
         grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .footer-brand img {
+        width: 220px;
+        height: auto;
+    }
+
+    .footer-bottom {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
         text-align: center;
     }
-}
 
-/* Small Mobile */
-@media (max-width: 480px) {
-    .container {
-        width: 94%;
-    }
-
-    .hero-content h1 {
-        font-size: 30px;
-    }
-
-    h2 {
-        font-size: 26px;
-    }
-
-    .hero-section {
-        padding: 35px 0;
-    }
-
-    button,
-    .btn {
-        max-width: 100%;
-    }
-
-    input,
-    textarea,
-    select {
-        width: 100%;
-    }
-
-    .services-grid,
-    .staffing-grid,
-    .how-it-works-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-container {
-        grid-template-columns: 1fr;
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
     }
 }
+
 
 /* Extra Small Mobile */
-@media (max-width: 360px) {
+@media (max-width: 380px) {
+
+    #logo img {
+        width: 190px;
+    }
+
     .hero-content h1 {
-        font-size: 26px;
+        font-size: 28px;
     }
 
-    nav ul {
-        gap: 8px;
+    .services-heading h2,
+    .how-heading h2,
+    .cost-heading h2 {
+        font-size: 29px;
     }
 
-    nav ul li a {
-        font-size: 13px;
+    .contact-heading h2 {
+        font-size: 27px;
     }
-}
+} 
